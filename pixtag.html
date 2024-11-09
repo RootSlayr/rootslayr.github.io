@@ -2,7 +2,150 @@
 <html lang="en">
 
 <head>
-    PixTag
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixTag - Anirudh Chidambaram</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background-color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            padding: 2em 0;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        a {
+            color: #66c;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #88d;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background: #282828;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #fff;
+        }
+
+        h3 {
+            color: #ddd;
+        }
+
+        .project {
+            margin-bottom: 60px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .loading {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .loaded {
+            opacity: 1;
+        }
+
+        .profile-pic {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
 </head>
+
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="Ani.jpg" alt="Anirudh Chidambaram" class="profile-pic">
+        </a>
+        <h1>Anirudh Chidambaram</h1>
+        <p>Software Engineer | Project Portfolio</p>
+        <p>
+            <a href="tel:+61478478494">+61-478-478-494</a> |
+            <a href="mailto:anirudh.chida@gmail.com">anirudh.chida@gmail.com</a> |
+            <a href="https://github.com/RootSlayr">Github</a> |
+            <a href="https://www.linkedin.com/in/anirudh-chida/">LinkedIn</a>
+        </p>
+    </header>
+
+    <main class="loading">
+
+        <section id="project-details">
+            <h2>PixTag</h2>
+            <h3>AWS-powered Serverless Image Storage and Tagging System</h3>
+            <p>PixTag is an advanced serverless image storage system with tagging capabilities, developed using AWS
+                services. The project includes image upload, tagging, and retrieval, with features such as thumbnail
+                generation and object detection. [cite: 9, 10, 11, 12]</p>
+
+            <h4>Features</h4>
+            <ul>
+                <li>Image upload and storage using AWS S3</li>
+                <li>Tagging functionality to organize and categorize images</li>
+                <li>Image retrieval based on tags</li>
+                <li>Thumbnail generation for efficient browsing</li>
+                <li>Object detection using YOLO to automatically tag objects in images</li>
+            </ul>
+
+            <h4>Technical Details</h4>
+            <ul>
+                <li><strong>Role:</strong> Project Lead (4-person team)</li>
+                <li><strong>Technologies:</strong> Python, AWS (Lambda, DynamoDB, S3), JavaScript, HTML</li>
+                <li><strong>Achievements:</strong> Created APIs for efficient tag management and bulk operations,
+                    significantly enhancing image handling performance.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Anirudh Chidambaram. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelector('main').classList.remove('loading');
+            document.querySelector('main').classList.add('loaded');
+        });
+    </script>
+</body>
 
 </html>
