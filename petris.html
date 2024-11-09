@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MealMate - Anirudh Chidambaram</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background-color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            padding: 2em 0;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        a {
+            color: #66c;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #88d;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background: #282828;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #fff;
+        }
+
+        h3 {
+            color: #ddd;
+        }
+
+        .project {
+            margin-bottom: 60px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .loading {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .loaded {
+            opacity: 1;
+        }
+
+        .profile-pic {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="Ani.jpg" alt="Anirudh Chidambaram" class="profile-pic">
+        </a>
+        <h1>Anirudh Chidambaram</h1>
+        <p>Software Engineer | Project Portfolio</p>
+        <p>
+            <a href="tel:+61478478494">+61-478-478-494</a> |
+            <a href="mailto:anirudh.chida@gmail.com">anirudh.chida@gmail.com</a> |
+            <a href="https://github.com/RootSlayr">Github</a> |
+            <a href="https://www.linkedin.com/in/anirudh-chida/">LinkedIn</a>
+        </p>
+    </header>
+
+    <main class="loading">
+
+        <section id="project-details">
+            <h2>PETris</h2>
+            <h3>PET Scan Appointment Booking and Management Platform</h3>
+            <p>PETris is a full-stack web application designed to streamline PET scan bookings and improve patient
+                management. The platform provides a secure and responsive interface, enhancing the efficiency of medical
+                imaging service providers. [cite: 8]</p>
+
+            <h4>Features</h4>
+            <ul>
+                <li>Online appointment booking for patients</li>
+                <li>Automated appointment reminders and notifications</li>
+                <li>Secure patient data management</li>
+                <li>Reporting and analytics for tracking appointments and patient data</li>
+                <li>User-friendly interface for both patients and administrators</li>
+            </ul>
+
+            <h4>Technical Details</h4>
+            <ul>
+                <li><strong>Role:</strong> Full-stack Developer</li>
+                <li><strong>Technologies:</strong> C#, ASP.NET MVC, MS SQL, HTML, CSS, JavaScript</li>
+                <li><strong>Achievements:</strong> Increased revenue by 33% and improved booking efficiency, saving an
+                    average of 10 minutes per patient.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Anirudh Chidambaram. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelector('main').classList.remove('loading');
+            document.querySelector('main').classList.add('loaded');
+        });
+    </script>
+</body>
+
+</html>
