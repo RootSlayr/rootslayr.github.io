@@ -21,6 +21,7 @@
             background-color: #333;
             padding: 2em 0;
             text-align: center;
+            padding-left: 20px;
         }
 
         a {
@@ -66,12 +67,10 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* Smooth Scrolling */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Optional: Add a subtle loading animation */
         .loading {
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
@@ -100,29 +99,45 @@
             /* Slightly darker on hover */
             cursor: pointer;
         }
+
+        .profile-pic {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            /* float: left; */
+            display: block;
+            margin: 20px auto;
+        }
     </style>
 </head>
 
 <body>
 
     <header>
+        <img src="Ani.jpg" alt="Anirudh Chidambaram" class="profile-pic">
         <h1>Anirudh Chidambaram</h1>
         <p>Software Engineer | Project Portfolio</p>
         <p>
             <a href="tel:+61478478494">+61-478-478-494</a> |
             <a href="mailto:anirudh.chida@gmail.com">anirudh.chida@gmail.com</a> |
-            <a href="https://github.com/RootSlayr">Github</a>
+            <a href="https://github.com/RootSlayr">Github</a> |
+            <a href="https://www.linkedin.com/in/anirudh-chida/">LinkedIn</a>
         </p>
     </header>
 
     <main class="loading">
 
         <section id="about">
-            <h2>About Me</h2>
+            <h2>Who am I</h2>
             <p>I am a software engineer with a focus on developing efficient solutions in web, cloud, and mobile
                 platforms. My projects highlight my proficiency in Python, Java, and cloud services, with experience in
                 designing end-to-end systems. Explore my key projects below to see how I approach problem-solving and
                 technical innovation.</p>
+        </section>
+
+        <section id="experience">
+
         </section>
 
         <section id="projects">
@@ -153,6 +168,7 @@
                     <li><strong>Achievements:</strong> Implemented a dietary suggestion algorithm with over 95%
                         accuracy, enhancing user engagement by 20%.</li>
                 </ul>
+                <a href="pixtag.html" class="view-all-button">View Details</a>
             </div>
 
             <div class="project">
@@ -166,6 +182,7 @@
                     <li><strong>Achievements:</strong> Increased revenue by 33% and improved booking efficiency, saving
                         an average of 10 minutes per patient.</li>
                 </ul>
+                <a href="pixtag.html" class="view-all-button">View Details</a>
             </div>
         </section>
 
@@ -201,15 +218,17 @@
         // You might want to add specific IDs to your sections for more precise scrolling
 
         // Example: 
-        // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        //     anchor.addEventListener('click', function (e) {
-        //         e.preventDefault();
-
-        //         document.querySelector(this.getAttribute('href')).scrollIntoView({
-        //             behavior: 'smooth'
-        //         });
-        //     });
-        // });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault(
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                )
+            }
+            )
+        }
+        );
 
         // Optional: Loading animation
         window.addEventListener('load', function () {
